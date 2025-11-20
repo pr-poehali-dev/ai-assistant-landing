@@ -21,7 +21,7 @@ const Index = () => {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center">
               <Icon name="Sparkles" size={18} className="text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-900">Umni</span>
+            <span className="text-xl font-bold text-gray-900">Context.AI</span>
           </div>
           <div className="flex items-center gap-4">
             <Button variant="ghost" className="text-gray-600 hover:text-gray-900">
@@ -65,46 +65,66 @@ const Index = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-600/20 blur-3xl rounded-full"></div>
             <Card className="relative border-0 shadow-2xl overflow-hidden">
               <div className="bg-gradient-to-br from-gray-50 to-white p-8">
-                <div className="bg-white rounded-xl border border-gray-200 shadow-lg p-6">
+                <div className="bg-white rounded-xl border border-gray-200 shadow-lg p-6 relative">
                   <div className="flex items-center gap-2 mb-4 pb-4 border-b">
                     <div className="flex gap-1.5">
                       <div className="w-3 h-3 rounded-full bg-red-400"></div>
                       <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
                       <div className="w-3 h-3 rounded-full bg-green-400"></div>
                     </div>
-                    <span className="text-sm text-gray-500 ml-4">example.com</span>
+                    <span className="text-sm text-gray-500 ml-4">wikipedia.org</span>
                   </div>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    Искусственный интеллект — это наука и технология создания интеллектуальных машин, 
-                    особенно интеллектуальных компьютерных программ. ИИ связан со сходной задачей 
-                    <span className="bg-primary/10 text-primary px-1 rounded"> использования компьютеров </span>
-                    для понимания человеческого интеллекта.
+                  <p className="text-gray-700 leading-relaxed text-base">
+                    <span className="font-semibold">«Hey!дoenetворитeльноe решение»</span> — фантастический рассказ 
+                    Рэя Брэдбери, впервые опубликованный в 1950 году. 
+                    Рассказ описывает жизнь семьи Хайнеса в доме будущего, где все процессы 
+                    полностью автоматизированы. Главный герой по имени Джордж Хайнес живёт со своей женой 
+                    <span className="bg-blue-100 text-blue-900 px-1.5 py-0.5 rounded"> о Джорджем Хайнесе </span>
+                    Манни в масштабном футуристическом доме.
                   </p>
-                  <div className="absolute right-12 top-40 animate-scale-in">
-                    <Card className="w-80 border-0 shadow-2xl">
-                      <CardContent className="p-4">
-                        <div className="flex items-start gap-3 mb-3">
-                          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
-                            <Icon name="Sparkles" size={16} className="text-white" />
+                  
+                  <div className="absolute -right-4 top-24 animate-scale-in z-10">
+                    <Card className="w-[400px] border border-gray-200 shadow-2xl bg-white rounded-2xl">
+                      <CardContent className="p-0">
+                        <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
+                          <div className="flex items-center gap-2">
+                            <div className="w-6 h-6 rounded-lg bg-blue-600 flex items-center justify-center">
+                              <Icon name="Sparkles" size={14} className="text-white" />
+                            </div>
+                            <span className="font-semibold text-gray-900">Context.AI</span>
                           </div>
-                          <div className="flex-1">
-                            <p className="text-sm text-gray-700 leading-relaxed">
-                              Применение компьютеров для обработки информации и решения задач, 
-                              похожих на те, что решает человеческий мозг.
-                            </p>
+                          <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+                            <Icon name="X" size={16} className="text-gray-400" />
+                          </Button>
+                        </div>
+                        
+                        <div className="px-5 py-4">
+                          <div className="flex items-center gap-2 mb-3">
+                            <div className="animate-spin">
+                              <Icon name="Loader2" size={16} className="text-blue-600" />
+                            </div>
+                            <span className="text-sm text-gray-600">Анализируем выделение...</span>
                           </div>
                         </div>
-                        <div className="flex gap-2 pt-3 border-t">
-                          <Button size="sm" variant="ghost" className="text-xs">
-                            <Icon name="Copy" size={14} className="mr-1" />
+                        
+                        <div className="px-5 pb-4 flex gap-2 border-t border-gray-100 pt-4">
+                          <Button size="sm" variant="outline" className="flex-1 text-xs h-9">
+                            <Icon name="Copy" size={14} className="mr-1.5" />
                             Копировать
                           </Button>
-                          <Button size="sm" variant="ghost" className="text-xs">
-                            <Icon name="Languages" size={14} className="mr-1" />
+                          <Button size="sm" variant="outline" className="flex-1 text-xs h-9">
+                            <Icon name="Wand2" size={14} className="mr-1.5" />
+                            Упростить
+                          </Button>
+                          <Button size="sm" variant="outline" className="flex-1 text-xs h-9">
+                            <Icon name="Languages" size={14} className="mr-1.5" />
                             Перевести
                           </Button>
-                          <Button size="sm" variant="ghost" className="text-xs">
-                            <Icon name="Lightbulb" size={14} className="mr-1" />
+                        </div>
+                        
+                        <div className="px-5 pb-5">
+                          <Button size="sm" className="w-full bg-blue-600 hover:bg-blue-700 text-white h-9">
+                            <Icon name="Lightbulb" size={14} className="mr-1.5" />
                             Объяснить
                           </Button>
                         </div>
@@ -194,58 +214,99 @@ const Index = () => {
             ))}
           </div>
 
-          <Card className="border-0 shadow-xl">
-            <CardContent className="p-12">
-              {selectedExample === 'word' && (
-                <div className="space-y-4 animate-fade-in">
-                  <div className="flex items-center gap-4">
-                    <div className="text-lg font-medium text-gray-900 bg-gray-100 px-4 py-2 rounded-lg">
-                      фотосинтез
+          <div className="grid md:grid-cols-3 gap-6">
+            {selectedExample === 'word' && (
+              <>
+                <Card className="border-0 shadow-xl col-span-3 animate-fade-in">
+                  <CardContent className="p-8">
+                    <div className="bg-gray-50 rounded-xl p-6 mb-6 relative">
+                      <p className="text-gray-800 text-base leading-relaxed">
+                        Интернет вещей (<span className="bg-blue-100 text-blue-900 px-1.5 py-0.5 rounded font-medium">IoT</span>) — концепция вычислительной сети физических предметов.
+                      </p>
                     </div>
-                    <Icon name="ArrowRight" size={24} className="text-gray-400" />
-                    <div className="flex-1 text-gray-700">
-                      Процесс, при котором растения преобразуют свет в энергию
+                    <div className="bg-white border-2 border-primary/20 rounded-xl p-6">
+                      <div className="flex items-start gap-3 mb-4">
+                        <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+                          <Icon name="Sparkles" size={16} className="text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <p className="text-gray-900 font-medium mb-2">Internet of Things</p>
+                          <p className="text-gray-700 text-sm leading-relaxed">
+                            Сеть физических устройств со встроенными датчиками и софтом, которые могут обмениваться данными через интернет
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              )}
-              {selectedExample === 'question' && (
-                <div className="space-y-4 animate-fade-in">
-                  <div className="flex items-center gap-4">
-                    <div className="text-lg font-medium text-gray-900 bg-gray-100 px-4 py-2 rounded-lg">
-                      Как работает квантовый компьютер?
+                  </CardContent>
+                </Card>
+              </>
+            )}
+            {selectedExample === 'question' && (
+              <>
+                <Card className="border-0 shadow-xl col-span-3 animate-fade-in">
+                  <CardContent className="p-8">
+                    <div className="bg-gray-50 rounded-xl p-6 mb-6">
+                      <p className="text-gray-800 text-base leading-relaxed">
+                        <span className="bg-blue-100 text-blue-900 px-1.5 py-0.5 rounded font-medium">Что такое нейронная сеть?</span>
+                      </p>
                     </div>
-                    <Icon name="ArrowRight" size={24} className="text-gray-400" />
-                    <div className="flex-1 text-gray-700">
-                      Использует квантовые биты (кубиты) для параллельных вычислений, 
-                      что позволяет решать определённые задачи быстрее обычных компьютеров
+                    <div className="bg-white border-2 border-primary/20 rounded-xl p-6">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+                          <Icon name="Sparkles" size={16} className="text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <p className="text-gray-700 text-sm leading-relaxed">
+                            Нейронная сеть — это вычислительная модель, вдохновлённая работой мозга. 
+                            Она состоит из слоёв искусственных нейронов, которые обрабатывают данные 
+                            и находят закономерности. Используется для распознавания образов, 
+                            обработки языка и предсказаний.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              )}
-              {selectedExample === 'paragraph' && (
-                <div className="space-y-4 animate-fade-in">
-                  <div className="space-y-3">
-                    <div className="text-sm text-gray-500 font-medium uppercase tracking-wide">Исходный текст</div>
-                    <div className="text-gray-700 bg-gray-50 p-4 rounded-lg leading-relaxed">
-                      Блокчейн — это распределённая база данных, которая хранит информацию 
-                      о всех транзакциях участников системы в виде цепочки блоков. 
-                      Каждый блок содержит криптографический хеш предыдущего блока, 
-                      временную метку и данные транзакций.
+                  </CardContent>
+                </Card>
+              </>
+            )}
+            {selectedExample === 'paragraph' && (
+              <>
+                <Card className="border-0 shadow-xl col-span-3 animate-fade-in">
+                  <CardContent className="p-8">
+                    <div className="bg-gray-50 rounded-xl p-6 mb-6">
+                      <div className="text-xs text-gray-500 font-semibold uppercase tracking-wide mb-3">Исходный текст</div>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        <span className="bg-blue-100 text-blue-900 px-1 py-0.5 rounded">
+                          Квантовые компьютеры используют принципы квантовой механики для обработки информации. 
+                          В отличие от классических компьютеров, которые оперируют битами со значениями 0 или 1, 
+                          квантовые компьютеры используют кубиты, способные находиться в суперпозиции обоих состояний 
+                          одновременно. Это позволяет им выполнять определённые вычисления экспоненциально быстрее.
+                        </span>
+                      </p>
                     </div>
-                  </div>
-                  <Icon name="ArrowDown" size={24} className="text-gray-400 mx-auto" />
-                  <div className="space-y-3">
-                    <div className="text-sm text-gray-500 font-medium uppercase tracking-wide">Краткое содержание</div>
-                    <div className="text-gray-900 bg-primary/5 p-4 rounded-lg font-medium">
-                      Блокчейн — защищённая цепочка блоков с данными транзакций, 
-                      где каждый блок связан с предыдущим
+                    <div className="flex justify-center mb-6">
+                      <Icon name="ArrowDown" size={24} className="text-primary" />
                     </div>
-                  </div>
-                </div>
-              )}
-            </CardContent>
-          </Card>
+                    <div className="bg-white border-2 border-primary/20 rounded-xl p-6">
+                      <div className="text-xs text-gray-500 font-semibold uppercase tracking-wide mb-3">Краткое содержание</div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center flex-shrink-0">
+                          <Icon name="Sparkles" size={16} className="text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <p className="text-gray-900 text-sm leading-relaxed font-medium">
+                            Квантовые компьютеры используют кубиты вместо битов, которые могут 
+                            быть в нескольких состояниях одновременно. Это делает их намного быстрее 
+                            в определённых задачах.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </>
+            )}
+          </div>
         </div>
       </section>
 
@@ -398,11 +459,11 @@ const Index = () => {
             {[
               {
                 q: 'Как установить расширение?',
-                a: 'Перейдите в магазин расширений вашего браузера (Chrome Web Store, Firefox Add-ons), найдите Umni и нажмите "Установить". Процесс займёт несколько секунд.'
+                a: 'Перейдите в магазин расширений вашего браузера (Chrome Web Store, Firefox Add-ons), найдите Context.AI и нажмите "Установить". Процесс займёт несколько секунд.'
               },
               {
                 q: 'Какие браузеры поддерживаются?',
-                a: 'Umni работает в Chrome, Firefox, Edge и Safari. Мы постоянно добавляем поддержку новых браузеров.'
+                a: 'Context.AI работает в Chrome, Firefox, Edge и Safari. Мы постоянно добавляем поддержку новых браузеров.'
               },
               {
                 q: 'Сколько стоит PRO-подписка?',
@@ -461,7 +522,7 @@ const Index = () => {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center">
                 <Icon name="Sparkles" size={18} className="text-white" />
               </div>
-              <span className="text-xl font-bold">Umni</span>
+              <span className="text-xl font-bold">Context.AI</span>
             </div>
             <div className="flex gap-8 text-sm text-gray-400">
               <a href="#" className="hover:text-white transition-colors">Возможности</a>
@@ -471,7 +532,7 @@ const Index = () => {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
-            © 2024 Umni. Все права защищены.
+            © 2024 Context.AI. Все права защищены.
           </div>
         </div>
       </footer>
